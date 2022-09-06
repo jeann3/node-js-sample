@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "Say hello"
           command: |
-            service docker start
+            service docker restart
             docker build -t testdockerimage/dockernodejs .
             docker run -p 8080 testdockerimage/dockernodejs
 
