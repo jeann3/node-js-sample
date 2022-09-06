@@ -18,8 +18,8 @@ jobs:
           name: "Say hello"
           command: |
             sudo service docker start
-            docker build -t testdockerimage/dockernodejs .
-            docker run -p 8080 testdockerimage/dockernodejs
+            sudo docker build -t testdockerimage/dockernodejs .
+            sudo docker run -p 8080 testdockerimage/dockernodejs
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
