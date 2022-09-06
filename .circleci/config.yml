@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "Say hello"
           command: |
-            sudo systemctl start docker
+            sudo service docker start
             docker build -t testdockerimage/dockernodejs .
             docker run -p 8080 testdockerimage/dockernodejs
 
