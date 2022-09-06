@@ -16,8 +16,10 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: systemctl start docker
-          docker run testdockerimage/dockernodejs
+          command:
+            systemctl start docker
+            docker build -t testdockerimage/dockernodejs .
+            docker run -p 8080 testdockerimage/dockernodejs
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
